@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block style %}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+body {
+    background-image: url('Prem.jpg');
+    background-color: #38003c;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.home {
+    height: 65vh;
+    width: 150vh;
+    text-align: center;
+    <!--background-color: #1dde80;-->
+    background-size: 100% 200%;
+    background: linear-gradient(#1dde80, #1dde80 50%, #e90052 50%, #e90052);
+    transition: all 0.2s ease;
+    background-size: 100% 200%;
+    transition: all 0.2s ease;
+    animation: down-bump 0.4s ease;
+    border-radius: 100px 300px;
+}
+.home:hover{
+    <!--background-color: #24a667;-->
+    background-position: 100% 100%;
+    background-position: 100% 100%;
+     animation: up-bump 0.4s ease;
+}
+
+.about-section {
+    padding-top: 15%;
+    text-align: center;
+    background-color:#1dde80;
+    color: ;
+      font-weight: bold;
+    margin-bottom: 25px;
+      border-radius: 100px 70px;
+      height: 50vh;
+  }
+
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 2em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 2em; }
+}
+
+.text1 {
+    height: 100vh;
+    padding-top: 12.5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    color: #F8F8FF;
+}
+
+.text1 h1 {
+    padding: 10px;
+    font-size: xxx-large;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-style: italic;
+}
+.text1 h2{
+    padding: 10px;
+    font-size: xxx-large;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: italic;
+}
+
+
+{% endblock %}
+
+
+{% block main %}
+
+<div class="about-section">
+    <h1 style="text-align:center; font-family: 'Trebuchet MS', sans-serif; font-weight:bold; color:white;">Premier League Betting Predictor!</h1>
+</div>
+{% endblock %}

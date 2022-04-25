@@ -1,0 +1,21 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+.home {
+    height: 100vh;
+    text-align: center;
+    border-style: dotted;
+    border-color:rgb(0, 0, 0);
+    box-shadow: white;
+    display: grid;
+    place-items:start-center;
+}
+
+.text1 {
+    border-style: dotted;
+    border-color: red;
+    border-width: 10px;
+    font-size: xx-large;
+}

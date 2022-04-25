@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+<!-- WHERES ANSH I CANT SEE THE WEBSITE-->
+
+{% block title %} 
+    Predictor 
+{% endblock %}
+
+
+{% block style %}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+}
+
+.text1{
+  padding: 40px;
+  text-align: center;
+  background-color:#1dde80;
+  color: white;
+    font-weight: bold;
+     margin-bottom: 25px;
+    border-radius: 60px 60px;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    background-color:#38003c; <!--#e90052 here's for RED-->
+    color: white;
+}
+
+h4 {
+    padding-top: 1%;
+}
+
+table {
+    width: 100%;
+    padding: 5%;
+}
+
+tr {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+{% endblock %}
+
+
+{% block main %}    
+
+<div class="predictor">
+    <h1 class="display-1" style="letter-spacing: 5px; color: white; font-weight:bold;">OUR PREDICTIONS</h1>
+    <div class="text1">
+        <h4 style="color: white" class="lead">In this table you can see the model's predictions. The table is organized by ranking, and for each team, the model outputs the number of <b>points, wins, draws and losses.</b></h4>
+        <h4 style="color: white; padding-bottom:2%;">{{intro_for_predictor}}, {{intro_next_for_predictor}} <b>{{team1}}</b> and <b>{{team2}}</b> are going to lead the table in first place and second place, while <b>{{team3rdlast}}</b>, <b>{{team2ndlast}}</b> and <b>{{teamlast}}</b> look to be at the bottom of the table this year. Overall, it looks like <b>{{team1}}</b>, <b>{{team2}}</b>, <b>{{team3}}</b> and <b>{{team4}}</b> are going to qualify for the Champions League, while <b>{{team5}}</b> and <b>{{team6}}</b> will clinch a place in the Europa League.</h4>
+    </div>
+</div>
+
+<!--tr and td-->
+
+<div>
+    <table class="table table-striped table-dark table-hover">
+        <tr>
+            <th scope="col">Team</th>
+            <th scope="col">Points</th>
+            <th scope="col">Wins</th>
+            <th scope="col">Losses</th>
+            <th scope="col">Draws</th>
+        </tr>
+        {% for i in range(1, length) %}
+        <tr>
+            <td>{{ the_rankings[i][1] }}</td>
+            <td>{{ the_rankings[i][2] }}</td>
+            <td>{{ the_rankings[i][3] }}</td>
+            <td>{{ the_rankings[i][4] }}</td>
+            <td>{{ the_rankings[i][5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+{% endblock %}
