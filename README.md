@@ -1,2 +1,2 @@
 # Premdictor-Hackathon
- Group Assignment
+Group Project for HackTheNorth 2020++
